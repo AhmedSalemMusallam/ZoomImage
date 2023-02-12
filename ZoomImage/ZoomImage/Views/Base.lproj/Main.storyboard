@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ZoomImage" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" maximumZoomScale="10" translatesAutoresizingMaskIntoConstraints="NO" id="pIy-5a-QIW">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image-preview" translatesAutoresizingMaskIntoConstraints="NO" id="l5i-X3-1RD">
+                                        <rect key="frame" x="8" y="0.0" width="391" height="852"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="l5i-X3-1RD" firstAttribute="trailing" secondItem="pZW-FI-y6h" secondAttribute="trailing" constant="399" id="229-ge-IJO"/>
+                                    <constraint firstItem="l5i-X3-1RD" firstAttribute="height" secondItem="6y5-A0-5iq" secondAttribute="height" id="Tju-H3-fBg"/>
+                                    <constraint firstItem="l5i-X3-1RD" firstAttribute="bottom" secondItem="pZW-FI-y6h" secondAttribute="bottom" constant="852" id="TuC-Qw-jdB"/>
+                                    <constraint firstItem="l5i-X3-1RD" firstAttribute="leading" secondItem="pZW-FI-y6h" secondAttribute="leading" constant="8" id="WWF-D1-QVy"/>
+                                    <constraint firstItem="l5i-X3-1RD" firstAttribute="top" secondItem="pZW-FI-y6h" secondAttribute="top" id="rd3-c8-DdN"/>
+                                    <constraint firstItem="l5i-X3-1RD" firstAttribute="width" secondItem="6y5-A0-5iq" secondAttribute="width" multiplier="0.994911" id="zZT-o3-1dN"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="pZW-FI-y6h"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="6y5-A0-5iq"/>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="pIy-5a-QIW" secondAttribute="trailing" id="3dj-Tj-fdv"/>
+                            <constraint firstAttribute="bottom" secondItem="pIy-5a-QIW" secondAttribute="bottom" id="JBs-zQ-xf1"/>
+                            <constraint firstItem="pIy-5a-QIW" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="aRB-Yg-ed4"/>
+                            <constraint firstItem="pIy-5a-QIW" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="dvt-Z8-hUU"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageViewOutlest" destination="l5i-X3-1RD" id="Gk3-Ak-tes"/>
+                        <outlet property="scrollViewOutlet" destination="pIy-5a-QIW" id="MgZ-l0-btj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="135.1145038167939" y="3.5211267605633805"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="image-preview" width="364" height="364"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
